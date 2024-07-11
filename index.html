@@ -48,10 +48,17 @@
     </style>
 </head>
 <body>
-    <audio controls autoplay loop>
+    <audio id="birthdayAudio" autoplay loop>
         <source src="audio.mp3" type="audio/ogg">
-        <embed src="audio.mp3" autostart="true" loop="true" hidden="true"> 
-      </audio>
+    </audio>
+    <script>
+        var audio = document.getElementById('birthdayAudio');
+        audio.muted = true; 
+        window.onload = function() {
+            audio.muted = false;
+            audio.play();
+        };
+    </script>
     <div class="birthday-message">
         <h1>Happy Birthday, Dinesh Sir!</h1>
         <p>Dear Sir,</p>
